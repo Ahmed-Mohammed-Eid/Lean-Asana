@@ -1,0 +1,38 @@
+.Items {
+	list-style: none;
+	padding: 25px;
+	border-bottom: 1px solid #424244;
+
+	.Item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 8px;
+		font-size: 16px;
+		padding: 5px 10px;
+		margin-bottom: 2px;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		text-decoration: none;
+		color: #fff;
+
+		svg {
+			width: 20px;
+			height: 20px;
+
+			path,
+			circle {
+				stroke: #fff;
+			}
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+
+	.ActiveItem {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+}

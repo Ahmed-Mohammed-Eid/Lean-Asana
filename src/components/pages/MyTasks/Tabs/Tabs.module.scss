@@ -1,0 +1,79 @@
+@import "../../../../layouts/variables.scss";
+
+.Tabs {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	padding: 0 20px;
+	border-bottom: 1px solid $color-navigation-border;
+	margin-top: 20px;
+
+	.Tab {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		background-color: transparent;
+		border: none;
+		color: #a2a0a2;
+		font-size: 14px;
+		cursor: pointer;
+		padding: 5px;
+		border-radius: 8px;
+		margin-bottom: 8px;
+		transition: background-color 0.3s ease-in-out;
+
+		svg {
+			width: 16px;
+			height: 16px;
+			path,
+			circle {
+				stroke: #a2a0a2;
+				transition: stroke 0.2s ease-in-out;
+			}
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+			color: #f5f4f3;
+
+			svg path,
+			svg circle {
+				stroke: #f5f4f3;
+			}
+		}
+
+		.BorderBottom {
+			position: absolute;
+			bottom: -8px;
+			left: 5%;
+			width: 90%;
+			height: 2px;
+			border-radius: 5px;
+			visibility: hidden;
+			transform: scale3d(0, 1, 1);
+			transform-origin: center;
+			background-color: transparent;
+			transition: transform 0.3s ease-in-out;
+
+			&.Active {
+				visibility: visible;
+				background-color: #a2a0a2;
+				transform: scale3d(1, 1, 1);
+			}
+		}
+
+		&.Active {
+			color: #f5f4f3;
+			background-color: rgba(255, 255, 255, 0.2);
+
+			svg path,
+			svg circle {
+				stroke: #f5f4f3;
+			}
+		}
+	}
+}
