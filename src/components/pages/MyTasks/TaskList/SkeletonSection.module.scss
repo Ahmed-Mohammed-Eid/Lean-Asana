@@ -1,0 +1,63 @@
+// src/components/TaskList/Section.module.scss
+
+.addSectionButton {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	gap: 8px;
+	min-width: 300px;
+	padding: 10px;
+	background-color: transparent;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.2s ease, box-shadow 0.2s ease,
+		transform 0.2s ease;
+
+	// TYPO
+	font-size: 20px;
+	color: #6b6f76;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	svg {
+		path {
+			fill: #6b6f76;
+		}
+	}
+
+	.header_skeleton {
+		width: 50%;
+		height: 20px;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		background-color: #3a3a3a;
+		border-radius: 5px;
+	}
+
+	.body_skeleton {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1; // Allow the task list to grow and fill available space
+		gap: 8px;
+		margin-top: 10px;
+		border-radius: 5px;
+		background-image: linear-gradient(to bottom, #1e1f21, transparent);
+		min-height: 50px; // Ensure it has some minimum height
+		width: 100%;
+		&.draggingOver {
+			background-color: #3a3a3a; // Subtle background change when dragging over
+		}
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 1px #424244;
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+}

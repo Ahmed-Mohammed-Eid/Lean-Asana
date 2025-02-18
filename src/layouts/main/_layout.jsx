@@ -55,19 +55,32 @@ export default function _layout({ children }) {
 					<SidebarItems
 						items={[
 							{
-								to: "/Home",
+								to: "/",
 								name: "Home",
 								icon: <HomeIcon />,
+								onClick: (e) => console.log("Home clicked"),
 							},
 							{
-								to: "/about",
+								to: "/my-tasks",
 								name: "My tasks",
 								icon: <TaskIcon />,
+								onClick: (e) => {
+									e.preventDefault();
+									window.alert(
+										"This Page is under development, please be patient."
+									);
+								},
 							},
 							{
-								to: "/contact",
+								to: "/inbox",
 								name: "Inbox",
 								icon: <InboxIcon />,
+								onClick: (e) => {
+									e.preventDefault();
+									window.alert(
+										"This Page is under development, please be patient."
+									);
+								},
 							},
 						]}
 					/>

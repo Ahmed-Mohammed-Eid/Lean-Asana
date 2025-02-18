@@ -1,0 +1,100 @@
+@import "../../../../layouts/variables";
+
+.MenuButton {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	gap: 1px;
+
+	& > button {
+		padding: 5px 10px;
+		background-color: rgb(110, 110, 243);
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		transition: background-color $transition-s ease-in-out;
+
+		&:hover {
+			background-color: rgba(110, 110, 243, 0.8);
+		}
+
+		&:active {
+			background-color: rgba(110, 110, 243, 0.6);
+		}
+
+		svg path,
+		svg rect {
+			stroke: #fff;
+		}
+
+		&:nth-child(1) {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			padding: 5px 10px;
+		}
+
+		&:nth-child(2) {
+			position: relative;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+
+			.MenuContent {
+				position: absolute;
+				min-width: 200px;
+				max-width: 300px;
+				width: 220px;
+				top: 100%;
+				left: 0;
+				padding: 10px 0;
+				display: flex;
+				z-index: 1000;
+				flex-direction: column;
+				background-color: $color-content-bg;
+				border: 1px solid $color-navigation-border;
+				visibility: hidden;
+				transform: scale3d(1, 0, 1);
+				transform-origin: top left;
+				transition: transform $transition-s ease-in-out,
+					visibility $transition-s ease-in-out;
+
+				& > button {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					padding: 10px;
+					background-color: transparent;
+					border: none;
+					color: #fff;
+					cursor: pointer;
+					opacity: 0;
+					transition: opacity $transition-s ease-in-out;
+
+					.Hint {
+						display: inline-block;
+						font-size: 0.8rem;
+						color: #858585;
+						margin-left: auto;
+						border: 1px solid #858585;
+						padding: 2px;
+					}
+				}
+
+				&.Active {
+					visibility: visible;
+					transform: scale3d(1, 1, 1);
+
+					& > button {
+						opacity: 1;
+
+						&:hover {
+							background-color: $color-search-input-bg;
+						}
+					}
+				}
+			}
+		}
+	}
+}

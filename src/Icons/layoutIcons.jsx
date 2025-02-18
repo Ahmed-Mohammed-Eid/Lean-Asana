@@ -1,8 +1,8 @@
-export const BurgerIcon = () => {
+export const BurgerIcon = ({ size = 24 }) => {
 	return (
 		<svg
-			width={24}
-			height={24}
+			width={size}
+			height={size}
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +65,11 @@ export const SearchIcon = () => {
 	);
 };
 
-export const HomeIcon = () => {
+export const HomeIcon = ({ size = 24 }) => {
 	return (
 		<svg
-			width={24}
-			height={24}
+			width={size}
+			height={size}
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -93,11 +93,11 @@ export const HomeIcon = () => {
 	);
 };
 
-export const TaskIcon = () => {
+export const TaskIcon = ({ size = 24 }) => {
 	return (
 		<svg
-			width={24}
-			height={24}
+			width={size}
+			height={size}
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -139,11 +139,11 @@ export const InboxIcon = () => {
 	);
 };
 
-export const BoardIcon = () => {
+export const BoardIcon = ({ size = 24 }) => {
 	return (
 		<svg
-			width={24}
-			height={24}
+			width={size}
+			height={size}
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -156,11 +156,11 @@ export const BoardIcon = () => {
 	);
 };
 
-export const CalendarIcon = () => {
+export const CalendarIcon = ({ size = 24 }) => {
 	return (
 		<svg
-			width={24}
-			height={24}
+			width={size}
+			height={size}
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -217,6 +217,48 @@ export const CalendarIcon = () => {
 				strokeWidth={2}
 				strokeLinecap="round"
 				strokeLinejoin="round"
+			/>
+		</svg>
+	);
+};
+
+export const ArrowDownIcon = ({ size = 24 }) => {
+	return (
+		<svg
+			width={size}
+			height={size}
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M19.9201 8.95L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95"
+				stroke="#292D32"
+				strokeWidth="1.5"
+				strokeMiterlimit={10}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+		</svg>
+	);
+};
+
+export const PlusIcon = ({ size = 24 }) => {
+	return (
+		<svg
+			width={size}
+			height={size}
+			viewBox="0 0 32 32"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M16 5C16.5128 5 16.9355 5.38604 16.9933 5.88338L17 6V26C17 26.5523 16.5523 27 16 27C15.4872 27 15.0645 26.614 15.0067 26.1166L15 26V6C15 5.44772 15.4477 5 16 5Z"
+				fill="white"
+			/>
+			<path
+				d="M26 15C26.5523 15 27 15.4477 27 16C27 16.5128 26.614 16.9355 26.1166 16.9933L26 17H6C5.44772 17 5 16.5523 5 16C5 15.4872 5.38604 15.0645 5.88338 15.0067L6 15H26Z"
+				fill="white"
 			/>
 		</svg>
 	);

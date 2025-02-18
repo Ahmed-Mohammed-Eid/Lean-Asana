@@ -5,7 +5,12 @@ export default function SidebarItems({ items }) {
 	return (
 		<ul className={classes.Items}>
 			{items.map((item, index) => (
-				<NavLink key={"sidebar" + index} to={item.to}>
+				<NavLink
+					key={"sidebar" + index}
+					to={item.to}
+					onClick={item.onClick}
+					style={{ textDecoration: "none" }}
+				>
 					{({ isActive }) => (
 						<li
 							className={[

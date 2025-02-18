@@ -1,0 +1,129 @@
+:root {
+	// Dark theme colors
+	--calendar-bg: #1a1a1a;
+	--calendar-surface: #2a2a2a;
+	--calendar-primary: #4f46e5;
+	--calendar-hover: rgba(79, 70, 229, 0.15);
+	--calendar-text: #e1e1e1;
+	--calendar-text-muted: #a1a1aa;
+	--calendar-today: #dc2626;
+	--calendar-border: #404040;
+}
+
+.calendar {
+	width: 280px;
+	border: 1px solid var(--calendar-border);
+	border-radius: 12px;
+	padding: 12px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		sans-serif;
+	background: var(--calendar-bg);
+	color: var(--calendar-text);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+	margin-bottom: 16px;
+
+	.navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 8px;
+
+		button {
+			background: none;
+			border: none;
+			padding: 4px 8px;
+			cursor: pointer;
+			color: var(--calendar-text);
+			font-size: 14px;
+
+			&:hover {
+				color: var(--calendar-primary);
+			}
+		}
+	}
+
+	.currentPeriod {
+		text-align: center;
+		margin-bottom: 8px;
+
+		span {
+			font-weight: 500;
+			font-size: 1.05em;
+		}
+
+		.todayButton {
+			background: none;
+			border: none;
+			padding: 4px 8px;
+			cursor: pointer;
+			font-size: 0.85em;
+			color: var(--calendar-primary);
+			margin-left: 8px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 2px;
+	user-select: none;
+}
+
+.day,
+.dayName,
+.empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 32px;
+	width: 32px;
+	font-size: 0.9em;
+}
+
+.dayName {
+	color: var(--calendar-text-muted);
+	font-size: 0.8em;
+	font-weight: 500;
+}
+
+.day {
+	cursor: pointer;
+	border-radius: 6px;
+	transition: all 0.15s ease;
+
+	&:hover {
+		background-color: var(--calendar-hover);
+	}
+
+	&.today {
+		color: var(--calendar-today);
+		font-weight: 600;
+	}
+
+	&.inRange {
+		background-color: var(--calendar-hover);
+	}
+
+	&.rangeStart,
+	&.rangeEnd {
+		background-color: var(--calendar-primary);
+		color: white;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 2px var(--calendar-primary);
+	}
+}
+
+.empty {
+	background-color: transparent;
+}

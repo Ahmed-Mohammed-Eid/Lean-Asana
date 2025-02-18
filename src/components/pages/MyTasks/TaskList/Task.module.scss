@@ -1,0 +1,27 @@
+// src/components/TaskList/Task.module.scss
+
+.taskContainer {
+	background-color: #2a2b2d;
+	border-radius: 4px;
+	padding: 10px;
+	display: flex;
+	height: 104px;
+	min-height: 104px; // Set a minimum height
+	align-items: center; // Vertically center content
+	gap: 10px;
+	box-shadow: 0 0 0 1px #424244, 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+	transition: background-color 0.2s ease;
+	position: relative;
+	color: #fff;
+	border: 1px solid transparent; // Add a border
+
+	&:hover {
+		border: 1px solid #565557; // Add a border
+	}
+
+	&.dragging {
+		background-color: #4a4a4a; // Slightly darker when dragging
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); // More pronounced shadow
+		transform: scale(1.02); // Slightly enlarge
+	}
+}
