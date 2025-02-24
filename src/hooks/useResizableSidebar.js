@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useRef } from "react";
 
-export function useResizableSidebar(minWidth = 240, maxWidth = 400) {
+export function useResizableSidebar(
+	minWidth = 240,
+	maxWidth = 400,
+	direction = "left"
+) {
 	const sidebarRef = useRef(null);
 	const startResizeRef = useRef({ x: 0, width: 0 });
 	const isResizingRef = useRef(false);
@@ -21,20 +25,25 @@ export function useResizableSidebar(minWidth = 240, maxWidth = 400) {
 
 	const onMouseMove = useCallback(
 		(e) => {
-			if (!isResizingRef.current) return;
+			if (!isResizingRef.current || !sidebarRef.current) return;
 
 			const delta = e.clientX - startResizeRef.current.x;
-			const newWidth = startResizeRef.current.width + delta;
+			let newWidth;
 
-			if (
-				sidebarRef.current &&
-				newWidth >= minWidth &&
-				newWidth <= maxWidth
-			) {
+			if (direction === "left") {
+				// For left sidebar, increase width when dragging to the right
+				newWidth = startResizeRef.current.width + delta;
+			} else if (direction === "right") {
+				// For right sidebar, decrease width when dragging to the left
+				newWidth = startResizeRef.current.width - delta;
+			}
+
+			// Clamp the width within the min and max bounds
+			if (newWidth >= minWidth && newWidth <= maxWidth) {
 				sidebarRef.current.style.width = `${newWidth}px`;
 			}
 		},
-		[minWidth, maxWidth]
+		[minWidth, maxWidth, direction]
 	);
 
 	useEffect(() => {

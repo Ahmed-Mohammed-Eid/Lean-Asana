@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./MenuButton.module.scss"; // Import SCSS module
 import { ArrowDownIcon, PlusIcon } from "../../../../Icons/layoutIcons"; // Import Icons
+import { useClickOutside } from "../../../../hooks/useClickOutside";
 
 const MenuButton = ({
 	listItems = [],
@@ -10,6 +11,9 @@ const MenuButton = ({
 	onClick = () => {}, // Add onClick prop
 }) => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
+	const menuRef = useRef(null);
+
+	useClickOutside(menuRef, () => setMenuOpen(false));
 
 	const toggleMenu = (event) => {
 		// IF THE CLIXK IS NOT ON THE DATA-TYPE LIST OR ITS CHILDREN, CLOSE THE MENU
@@ -35,9 +39,10 @@ const MenuButton = ({
 						isMenuOpen ? styles.Active : "",
 					].join(" ")}
 					data-type="list"
+					ref={menuRef}
 				>
 					{listItems.map((item, index) => (
-						<button
+						<div
 							key={index}
 							onClick={() => {
 								item?.onClick();
@@ -47,7 +52,7 @@ const MenuButton = ({
 							{item?.icon}
 							{item?.label}
 							<span className={styles.Hint}>{item?.hint}</span>
-						</button>
+						</div>
 					))}
 				</div>
 			</button>

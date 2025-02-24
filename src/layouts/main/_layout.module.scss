@@ -130,6 +130,7 @@
 	max-width: 400px;
 	width: 400px;
 	overflow: hidden;
+	transition: all $transition-ms;
 
 	.resizer {
 		position: absolute;
@@ -139,17 +140,24 @@
 		width: 4px;
 		background-color: transparent;
 		cursor: col-resize;
-		transition: background-color 0.2s;
+		transition: background-color 0.5s;
 
 		&:hover,
 		&:active {
 			background-color: $color-selected-border;
 		}
 	}
+
+	&.hide {
+		visibility: hidden;
+		min-width: 0;
+		width: 0;
+	}
 }
 
 .main {
+	position: relative;
 	background-color: $color-content-bg;
 	overflow-y: hidden;
-	overflow-x: auto;
+	overflow-x: hidden;
 }

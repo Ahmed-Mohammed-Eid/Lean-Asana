@@ -1,0 +1,51 @@
+.CalendarHeader {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	padding: 10px 25px;
+
+	&__Today {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		color: #a2a0a2;
+
+		&__Button {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			padding: 5px;
+			border-radius: 4px;
+			font-size: 13px;
+			background-color: transparent;
+			border: 0;
+			color: #a2a0a2;
+			cursor: pointer;
+			transition: all 0.2s ease;
+
+			&:nth-child(2) {
+				font-size: 13px;
+			}
+
+			svg path {
+				stroke: #a2a0a2;
+			}
+
+			&:hover {
+				background-color: rgba($color: #ffffff, $alpha: 0.1);
+			}
+
+			&:active {
+				transform: scale(0.98);
+				background-color: rgba($color: #ffffff, $alpha: 0.2);
+			}
+		}
+	}
+
+	&__M_Y {
+		font-size: 13px;
+		color: #f5f4f3;
+	}
+}

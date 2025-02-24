@@ -1,0 +1,182 @@
+[
+	{
+		"id": 1,
+		"title": "Review Sprint Planning Documents",
+		"description": "Review and finalize sprint planning documents for the upcoming development cycle",
+		"completed": false,
+		"startDate": "2025-02-24",
+		"endDate": "2025-02-26",
+		"sectionId": 1
+	},
+	{
+		"id": 2,
+		"title": "Implement User Authentication",
+		"description": "Set up JWT-based authentication system with refresh token functionality",
+		"completed": false,
+		"startDate": "2025-02-15",
+		"endDate": "2025-02-18",
+		"sectionId": 1
+	},
+	{
+		"id": 3,
+		"title": "Database Schema Review",
+		"description": "Review and optimize current database schema for better performance",
+		"completed": true,
+		"startDate": "2025-02-14",
+		"endDate": "2025-02-14",
+		"sectionId": 2
+	},
+	{
+		"id": 4,
+		"title": "API Documentation Update",
+		"description": "Update API documentation with new endpoints and response formats",
+		"completed": false,
+		"startDate": "2025-02-16",
+		"endDate": "2025-02-17",
+		"sectionId": 1
+	},
+	{
+		"id": 5,
+		"title": "Client Meeting - Project Status",
+		"description": "Weekly status update meeting with client stakeholders",
+		"completed": false,
+		"startDate": "2025-02-16",
+		"endDate": "2025-02-16",
+		"sectionId": 1
+	},
+	{
+		"id": 6,
+		"title": "Bug Fix - Payment Processing",
+		"description": "Fix critical bug in payment processing module",
+		"completed": true,
+		"startDate": "2025-02-13",
+		"endDate": "2025-02-14",
+		"sectionId": 2
+	},
+	{
+		"id": 7,
+		"title": "UI Component Library Update",
+		"description": "Update and document new components in the shared UI library",
+		"completed": false,
+		"startDate": "2025-02-19",
+		"endDate": "2025-02-21",
+		"sectionId": 3
+	},
+	{
+		"id": 8,
+		"title": "Performance Testing",
+		"description": "Conduct performance testing on the new features",
+		"completed": false,
+		"startDate": "2025-02-20",
+		"endDate": "2025-02-22",
+		"sectionId": 3
+	},
+	{
+		"id": 9,
+		"title": "Code Review - Frontend",
+		"description": "Review pull requests for the frontend team",
+		"completed": false,
+		"startDate": "2025-02-15",
+		"endDate": "2025-02-15",
+		"sectionId": 1
+	},
+	{
+		"id": 10,
+		"title": "Security Audit Preparation",
+		"description": "Prepare documentation and code for upcoming security audit",
+		"completed": false,
+		"startDate": "2025-02-19",
+		"endDate": "2025-02-23",
+		"sectionId": 3
+	},
+	{
+		"id": 11,
+		"title": "Team Training Session",
+		"description": "Conduct training session on new development tools",
+		"completed": false,
+		"startDate": "2025-02-16",
+		"endDate": "2025-02-16",
+		"sectionId": 1
+	},
+	{
+		"id": 12,
+		"title": "Infrastructure Cost Review",
+		"description": "Review and optimize cloud infrastructure costs",
+		"completed": true,
+		"startDate": "2025-02-12",
+		"endDate": "2025-02-13",
+		"sectionId": 2
+	},
+	{
+		"id": 13,
+		"title": "Mobile App Testing",
+		"description": "Test new features on iOS and Android platforms",
+		"completed": false,
+		"startDate": "2025-02-19",
+		"endDate": "2025-02-21",
+		"sectionId": 3
+	},
+	{
+		"id": 14,
+		"title": "Release Notes Draft",
+		"description": "Prepare release notes for version 2.0",
+		"completed": false,
+		"startDate": "2025-02-21",
+		"endDate": "2025-02-22",
+		"sectionId": 3
+	},
+	{
+		"id": 15,
+		"title": "Dependency Updates",
+		"description": "Update project dependencies and resolve conflicts",
+		"completed": true,
+		"startDate": "2025-02-13",
+		"endDate": "2025-02-14",
+		"sectionId": 2
+	},
+	{
+		"id": 16,
+		"title": "User Feedback Analysis",
+		"description": "Analyze and categorize recent user feedback",
+		"completed": false,
+		"startDate": "2025-02-15",
+		"endDate": "2025-02-16",
+		"sectionId": 1
+	},
+	{
+		"id": 17,
+		"title": "CI/CD Pipeline Optimization",
+		"description": "Optimize build and deployment pipelines",
+		"completed": false,
+		"startDate": "2025-02-19",
+		"endDate": "2025-02-21",
+		"sectionId": 3
+	},
+	{
+		"id": 18,
+		"title": "Accessibility Audit",
+		"description": "Conduct accessibility audit on main user flows",
+		"completed": false,
+		"startDate": "2025-02-20",
+		"endDate": "2025-02-22",
+		"sectionId": 3
+	},
+	{
+		"id": 19,
+		"title": "Data Migration Planning",
+		"description": "Plan database migration strategy for version 2.0",
+		"completed": false,
+		"startDate": "2025-02-15",
+		"endDate": "2025-02-17",
+		"sectionId": 1
+	},
+	{
+		"id": 20,
+		"title": "Tech Debt Review",
+		"description": "Review and prioritize technical debt items",
+		"completed": false,
+		"startDate": "2025-02-19",
+		"endDate": "2025-02-20",
+		"sectionId": 3
+	}
+]

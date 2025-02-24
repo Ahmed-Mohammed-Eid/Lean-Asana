@@ -11,16 +11,23 @@ import {
 } from "../../Icons/layoutIcons";
 // COMPONENTS
 import SidebarItems from "../../components/layout/SideBar/Items";
+import EditTaskSidebar from "../../components/pages/MyTasks/EditTaskSidebar/EditTaskSidebar";
 
 export default function _layout({ children }) {
 	const { sidebarRef, onMouseDown } = useResizableSidebar(240, 400);
 	const [showSearchPlaceholder, setShowSearchPlaceholder] = useState(true);
+	const [showSidebar, setShowSidebar] = useState(true);
+
+	// TOGGLE SIDEBAR
+	const toggleSidebar = () => {
+		setShowSidebar(!showSidebar);
+	};
 
 	return (
 		<div className={classes.layout}>
 			<header className={classes.topbar}>
 				{/* Toggle Icon */}
-				<button className={classes.toggle}>
+				<button className={classes.toggle} onClick={toggleSidebar}>
 					<BurgerIcon />
 				</button>
 				{/* Search */}
@@ -51,7 +58,13 @@ export default function _layout({ children }) {
 				</div>
 			</header>
 			<main className={classes.content}>
-				<aside ref={sidebarRef} className={classes.sidebar}>
+				<aside
+					ref={sidebarRef}
+					className={[
+						classes.sidebar,
+						showSidebar ? "" : classes.hide,
+					].join(" ")}
+				>
 					<SidebarItems
 						items={[
 							{
@@ -90,7 +103,10 @@ export default function _layout({ children }) {
 						onMouseDown={onMouseDown}
 					></div>
 				</aside>
-				<section className={classes.main}>{children}</section>
+				<section className={classes.main}>
+					{children}
+					<EditTaskSidebar />
+				</section>
 			</main>
 		</div>
 	);

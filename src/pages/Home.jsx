@@ -5,6 +5,7 @@ import { BoardIcon, CalendarIcon } from "../Icons/layoutIcons";
 import MenuButton from "../components/shared/Buttons/MenuButton/MenuButton";
 import CalendarButton from "../components/shared/Calendars/CalendarButton/CalendarButton";
 import TaskList from "../components/pages/MyTasks/TaskList/TaskList";
+import CalendarList from "../components/pages/MyTasks/CalendarList/CalendarList";
 
 export default function Home() {
 	const [activeTab, setActiveTab] = useState(0);
@@ -89,6 +90,7 @@ export default function Home() {
 					<TaskList />
 				</div>
 			)}
+			{activeTab === 1 && <CalendarList />}
 		</_layout>
 	);
 }

@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setKeysAndValues } from "../../../../Redux/features/my-tasks-slice";
 
 const Task = memo(({ task, index, onClick = () => {} }) => {
+	// MAKE THE TASK ID A STRING
+	const taskId = JSON.stringify(task.id);
 	// DISPATCH
 	const dispatch = useDispatch();
 	// REDUX STATE
@@ -32,7 +34,7 @@ const Task = memo(({ task, index, onClick = () => {} }) => {
 	};
 
 	return (
-		<Draggable draggableId={task.id} index={index}>
+		<Draggable draggableId={taskId} index={index}>
 			{(provided, snapshot) => (
 				<div
 					onClick={handleEditTask}

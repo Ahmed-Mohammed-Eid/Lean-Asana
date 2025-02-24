@@ -60,7 +60,7 @@
 				transition: transform $transition-s ease-in-out,
 					visibility $transition-s ease-in-out;
 
-				& > button {
+				& > div {
 					display: flex;
 					align-items: center;
 					gap: 10px;
@@ -86,7 +86,7 @@
 					visibility: visible;
 					transform: scale3d(1, 1, 1);
 
-					& > button {
+					& > div {
 						opacity: 1;
 
 						&:hover {
